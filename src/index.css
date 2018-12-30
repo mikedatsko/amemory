@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(./assets/fonts/Quicksand-Regular.ttf) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url(./assets/fonts/Quicksand-Bold.ttf) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.56) 51%, rgba(0,0,0,0.13) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0.56) 51%,rgba(0,0,0,0.13) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.56) 51%,rgba(0,0,0,0.13) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#21000000',GradientType=1 );
+}
+
+button {
+  background: cornflowerblue url(./assets/images/bg-card.svg) repeat 50%;
+  background-size: 9px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  transition: linear top 0.2s, linear box-shadow 0.2s;
+  outline: none;
+  z-index: 3;
+}
+
+button:active {
+  top: 0px;
+  box-shadow: 0 0px 0px rgba(0,0,0,0.4);
+}

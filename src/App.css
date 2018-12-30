@@ -1,0 +1,215 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.App-title {
+  font-size: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: cornflowerblue;
+  border-bottom: 5px solid cornflowerblue;
+  padding-bottom: 10px;
+}
+
+.App-title .App-logo {
+  background: url(./assets/images/logo.svg) no-repeat 50%;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  margin-right: 2px;
+}
+
+.App-header {
+  height: 520px;
+  width: 360px;
+  padding: 20px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.App-slogan {
+  font-size: 20px;
+  text-transform: lowercase;
+  margin: 0px 0 20px;
+  letter-spacing: 3px;
+}
+
+.App-start {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-score {
+  font-size: 20px;
+  margin: 20px 0 10px 5px;
+}
+
+.App-field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-field .App-icon {
+  display: flex;
+  width: 65px;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  margin: 5px;
+  color: orangered;
+  position: relative;
+  perspective: 150px;
+}
+
+.App-field .App-icon .App-icon-back {
+  display: flex;
+  width: 65px;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  position: absolute;
+  transition: linear box-shadow 0.1s, linear margin-top 0.1s, linear height 0.1s;
+  background: cornflowerblue url(./assets/images/bg-card.svg) repeat 50%;
+  background-size: 9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  opacity: 1;
+  margin-top: -3px;
+}
+
+.App-field .App-icon .App-icon-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  font-size: 30px;
+  position: absolute;
+  transition: linear opacity 0.05s, linear visibility 2s;
+  background: white;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.App-field .App-icon.selected .App-icon-back {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.4);
+  margin-top: 0px;
+  height: 65px;
+}
+
+.App-field .App-icon.selected .App-icon-front {
+  transition-delay: 0.1s;
+  opacity: 1;
+}
+
+.App-field .App-icon.verified .App-icon-back {
+  opacity: 0;
+}
+.App-field .App-icon.verified .App-icon-front {
+  background: lawngreen;
+  visibility: hidden;
+}
+
+.App-finished {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 300px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.App-finished .App-finished-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  color: lawngreen;
+  width: 100%;
+}
+
+.App-finished .App-finished-score-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.App-finished .App-finished-score {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+@keyframes App-icon-rotate-y-to {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-90deg);
+  }
+}
+
+@keyframes App-icon-rotate-y-from {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes App-icon-rotate-y-to-back {
+  0% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes App-icon-rotate-y-from-back {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

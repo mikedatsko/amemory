@@ -1,0 +1,24 @@
+{
+  "name": "amemory",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "express-sslify": "^1.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.13",
+    "serve-favicon": "^2.4.4"
+  },
+  "scripts": {
+    "start": "node ./src/backend/bin/www",
+    "start:local": "PORT=4321 node ./src/backend/bin/www",
+    "postinstall": "npm run build",
+    "watch": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "/"
+}
